@@ -16,8 +16,8 @@ console.log(palla)
 //Snack 1. - la vendetta.
 //Inserire  l’oggetto palla in una array var giochi = [];
 var giochi = [];
-giochi.push(palla.peso)
-console.log(giochi)
+giochi.push(palla)
+
 
 //Snack 1 - la conclusione per davvero.
 //Permettere all’utente di inserire un nuovo oggetto all’interno dell’array giochi
