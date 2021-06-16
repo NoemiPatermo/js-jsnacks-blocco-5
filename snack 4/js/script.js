@@ -33,39 +33,30 @@ var listaStudenti = [
 //Successivamente, con dei prompt chiediamo di volta in volta all'utente, la descrizione di ciascun studente
 //salviamola quindi all'interno della sua proprietà.  (In un ciclo per ciascun studente)
 
+var datiStudente = '';
+var ulElement = document.getElementById('student');
 
 for(var x = 0; x < listaStudenti.length; x++){
     listaStudenti[x].descrizione = prompt("Descrivi in poche battute lo studente");//così prendo descrizione
+
+    datiStudente += "<li> Dati studente:  "  // Accesso sgli elementi dell'array ovvero gli oggetti, così da 
+    datiStudente += listaStudenti[x]["nome"]+ " ";      //compiere singole operazioni su ognuno degli oggetti su cui cicli
+    datiStudente += listaStudenti[x]["cognome"]+ " "
+    datiStudente += listaStudenti[x]["età"]+ " "        //funzionava anche scrivendo listaStudenti[i].nome
+    datiStudente += listaStudenti[x]["descrizione"]+ " "  // listaStudenti[i].cognome 
+    datiStudente += "</li>"
 }
 console.log(listaStudenti)
+ulElement.innerHTML= datiStudente;
+
 //Stampiamo con un console.log il risultato di questo array di studenti aggiornato.
 
 
 //Bonus
-//Visualizzare nell’html questi dati in una forma tabellare.
-var ulElement = document.getElementById('student');
+//Visualizzare nell’html questi dati in una forma tabellare.      (IO HO CREATO DELLE UL CON DENTRO LI)
 
-//ulElement.innerHTML = '<li>model: </li>'
 
-var htmlString = '';
 
-for (var k in listaStudenti) {  // ciclo nell'oggetto
 
-    if (k === 'listaStudenti') { // qui scelgo l'array
-        htmlString += '<li>' + k + ': ';
 
-        for (var x = 0; x < listaStudenti[k].length; x++) { // ciclo l'array dei passengers
-            htmlString += listaStudenti[k][x]['nome'] + ', ';
-            htmlString += listaStudenti[k][x]['cognome'] + ', ';
-            htmlString += listaStudenti[k][x]['età'] + ', ';
-            htmlString += listaStudenti[k][x]['descrizione'] + ', ';
-        }
 
-        htmlString += '</li>';
-
-    } else {
-        htmlString += '<li>' + k + ': ' + listaStudenti[k] + '</li>'
-    }
-}
-
-ulElement.innerHTML += htmlString;
