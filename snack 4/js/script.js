@@ -39,8 +39,8 @@ var ulElement = document.getElementById('student');
 for(var x = 0; x < listaStudenti.length; x++){
     listaStudenti[x].descrizione = prompt("Descrivi in poche battute lo studente");//così prendo descrizione
 
-    datiStudente += "<li> Dati studente:  "  // Accesso sgli elementi dell'array ovvero gli oggetti, così da 
-    datiStudente += listaStudenti[x]["nome"]+ " ";      //compiere singole operazioni su ognuno degli oggetti su cui cicli
+    datiStudente += "<li> Dati studente:  "  // Accesso agli elementi dell'array ovvero gli oggetti, così da 
+    datiStudente += listaStudenti[x]["nome"]+ " "     //compiere singole operazioni su ognuno degli oggetti su cui cicli
     datiStudente += listaStudenti[x]["cognome"]+ " "
     datiStudente += listaStudenti[x]["età"]+ " "        //funzionava anche scrivendo listaStudenti[i].nome
     datiStudente += listaStudenti[x]["descrizione"]+ " "  // listaStudenti[i].cognome 
@@ -53,7 +53,7 @@ ulElement.innerHTML= datiStudente;
 
 
 //Bonus
-//Visualizzare nell’html questi dati in una forma tabellare.      (IO HO CREATO DELLE UL CON DENTRO LI)
+//Visualizzare nell’html questi dati in una forma tabellare.      (fatto con li)
 
 
 
