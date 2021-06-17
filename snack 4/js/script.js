@@ -85,4 +85,25 @@ for (var x = 0; x < listaStudenti.length; x++){
 
 
 }
+/*SCRITTO CON ES6
 
+for (var x = 0; x < listaStudenti.length; x++){
+    
+    //dato destrutturato
+
+    const {nome, cognome, età, descrizione} = listaStudenti[x];
+
+    //template literal
+
+    tableHtml.innerHtml += ` 
+    <ul>
+        <li>${nome}</li>
+        <li>${cognome}</li>
+        <li>${età}</li>
+        <li>${descrizione}</li>
+    </ul>
+
+     `
+    
+}
+*/
