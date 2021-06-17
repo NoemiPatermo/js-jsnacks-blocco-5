@@ -22,8 +22,9 @@ Calcolare il punteggio medio dei tre giocatori.*/
     ];
 
     var punteggio = 0; 
+    
     for (var x = 0; x < lakers.length; x++){
-        punteggio += lakers[x].score;
+        punteggio += parseInt(lakers[x].score); // se non fai il parseInt, score è una stringa e la media non vien fuori
     }
     var media = punteggio / lakers.length;
     console.log(media)

@@ -32,7 +32,7 @@ var listaStudenti = [
 ];
 //Successivamente, con dei prompt chiediamo di volta in volta all'utente, la descrizione di ciascun studente
 //salviamola quindi all'interno della sua proprietà.  (In un ciclo per ciascun studente)
-
+/*
 var datiStudente = '';
 var ulElement = document.getElementById('student');
 
@@ -55,8 +55,34 @@ ulElement.innerHTML= datiStudente;
 //Bonus
 //Visualizzare nell’html questi dati in una forma tabellare.      (fatto con li)
 
+*/
+//Ferma in una variabile locale lo studente //TABELLA CON LA SPIEGAZIONE DI OTTAVIO
+
+ for (var x = 0; x < listaStudenti.length; x++){
+
+    var thisStudent = listaStudenti[x];
+    var thisNameSurname = thisStudent.nome + ' ' + thisStudent.cognome;
+    thisStudent.descrizione = prompt("Inserisci la descrizione di " + thisNameSurname);
+    
+    //ALTERNATIVA settiamo la descrizione direttamente all'origine
+    //listaStudenti[x].descrizione = descrizione;
+}
+
+var tableHtml = document.querySelector('.table-container');
+
+for (var x = 0; x < listaStudenti.length; x++){
+
+    var tableRow = "<ul>"; //è una variabile locale
+    var thisStudent = listaStudenti[x];
+
+    tableRow += "<li>" + thisStudent.nome +  "</li>";
+    tableRow += "<li>" + thisStudent.cognome +  "</li>";
+    tableRow += "<li>" + thisStudent.età +  "</li>";
+    tableRow += "<li>" + thisStudent.descrizione +  "</li>";
+
+    tableRow += "</ul>";
+    tableHtml.innerHTML += tableRow;
 
 
-
-
+}
 
